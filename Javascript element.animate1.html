@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://static.platzi.com/media/files/index_d8a2a9ac-e017-4e00-b4f4-f7095138e457.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Javascript element.animate</title>
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      width: 600px;
+      border: 1px solid red;
+    }
+    .pelota {
+      width: 100px;
+      height: 100px;
+      background: red;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="pelota" id="pelota"></div>
+  </div>
+  <script>
+    const $pelota = document.getElementById('pelota');
+
+    // element.animate(keyframes = [], option = {})
+    const animation = $pelota.animate([
+      // from
+      {
+        transform: 'translateX(0)'
+      },
+      // to
+      {
+        transform: 'translateX(500px)' // 250
+      }
+    ],{
+      duration: 1000,
+      delay: 1000,
+      direction: 'normal',
+      easing: 'linear',
+      iterations: Infinity,
+      fill: 'forwards',
+      iterationStart: .5, // = 50%
+      // endDelay: 5000,
+    })
+  </script>
+
+
+</body></html>
